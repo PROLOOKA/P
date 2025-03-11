@@ -7,11 +7,11 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #191919; /* خلفية داكنة أنيقة */
-            color: #ffffff; /* نص أبيض */
+            background-color: #191919;
+            color: #ffffff;
             font-family: 'Arial', sans-serif;
         }
-        .login-container, .welcome-container, .content-container {
+        .login-container, .content-container {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,8 +28,8 @@
             text-align: center;
         }
         .login-container button {
-            background-color: #ffffff; /* لون أزرق داكن هادئ */
-            color: #000000; /* نص أبيض */
+            background-color: #ffffff;
+            color: #000000;
         }
         .error {
             color: red;
@@ -41,24 +41,8 @@
             display: none;
             margin-top: 10px;
         }
-        .welcome-container {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background-color: #2c2c2c; /* خلفية داكنة */
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-            z-index: 1000;
-            justify-content: center;
-        }
-        .welcome-container.show {
-            opacity: 1;
-            visibility: visible;
-        }
         .content-container {
             display: none;
-            flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -70,15 +54,13 @@
         }
         .button {
             text-align: center;
-            background-color: #272727; /* خلفية داكنة قليلاً */
+            background-color: #272727;
             border-radius: 15px;
             padding: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* ظل خفيف */
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .button:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* ظل أكثر إشراقًا */
         }
         .button img {
             border-radius: 15px;
@@ -87,42 +69,25 @@
         .button h2 {
             font-size: 14px;
             margin-top: 10px;
-            color: #ffffff; /* نص أبيض */
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
-    <!-- صفحة تسجيل الدخول -->
     <div class="login-container" id="login-container">
         <h2>تسجيل الدخول</h2>
-        <input type="password" id="password" placeholder="كلمة المرور 111">
+        <input type="password" id="password" placeholder="أدخل كلمة المرور">
         <button onclick="checkPassword()">دخول</button>
         <div class="error" id="error">كلمة المرور غير صحيحة</div>
-        <div class="loading-message" id="loading-message">انتظر قليلاً، سيتم نقلك إلى صفحة القنوات...</div>
+        <div class="loading-message" id="loading-message">انتظر قليلاً...</div>
     </div>
     
-    <!-- صفحة الترحيب -->
-    <div class="welcome-container" id="welcome-container"></div>
-    
-    <!-- صفحة القنوات -->
     <div class="content-container" id="content-container">
         <div class="grid1-container">
-            <!-- القنوات -->
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www12.0zz0.com/2024/02/02/07/420045594.png"><h2>LOOK TV</h2></div>
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www2.0zz0.com/2024/12/30/14/650347319.png"><h2>سيرفرات LOOK TV المميزة</h2></div>
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www11.0zz0.com/2024/03/15/12/969972175.png"><h2>الفجر سبورت</h2></div>
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www2.0zz0.com/2025/01/03/16/180622192.jpeg"><h2>ssc</h2></div>
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www2.0zz0.com/2025/01/03/16/296773948.jpeg"><h2>BIEN GRUB</h2></div>
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www2.0zz0.com/2025/01/03/16/254019580.jpeg"><h2>ozn</h2></div>
-            
-            <!-- القنوات الجديدة -->
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www2.0zz0.com/2025/01/03/16/664976339.jpeg"><h2>قناة جديدة 1</h2></div>
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www2.0zz0.com/2025/01/03/16/664976339.jpeg"><h2>قناة جديدة 2</h2></div>
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www2.0zz0.com/2025/01/03/16/664976339.jpeg"><h2>قناة جديدة 3</h2></div>
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www2.0zz0.com/2025/01/03/16/664976339.jpeg"><h2>قناة جديدة 4</h2></div>
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www2.0zz0.com/2025/01/03/16/664976339.jpeg"><h2>قناة جديدة 5</h2></div>
-            <div class="button" onclick="window.open('https://prolooka.github.io/AB')"><img src="https://www2.0zz0.com/2025/01/03/16/664976339.jpeg"><h2>قناة جديدة 6</h2></div>
-
+            <div class="button" onclick="window.open('https://prolooka.github.io/AB')">
+                <img src="https://www12.0zz0.com/2024/02/02/07/420045594.png">
+                <h2>LOOK TV</h2>
+            </div>
         </div>
     </div>
 
@@ -131,26 +96,14 @@
             const password = document.getElementById('password').value;
             const loadingMessage = document.getElementById('loading-message');
             if (password === '111') {
-                localStorage.setItem('loggedIn', 'true'); // حفظ حالة تسجيل الدخول
                 document.getElementById('login-container').style.display = 'none';
-                loadingMessage.style.display = 'block'; // عرض رسالة الانتظار
+                loadingMessage.style.display = 'block';
                 setTimeout(() => {
                     document.getElementById('content-container').style.display = 'flex';
-                    loadingMessage.style.display = 'none'; // إخفاء رسالة الانتظار بعد التحميل
-                }, 100); // إخفاء الرسالة بعد 0.1 ثانية
+                    loadingMessage.style.display = 'none';
+                }, 100);
             } else {
                 document.getElementById('error').style.display = 'block';
-            }
-        }
-
-        window.onload = function() {
-            if (localStorage.getItem('loggedIn') === 'true') {
-                document.getElementById('login-container').style.display = 'none';
-                document.getElementById('loading-message').style.display = 'block'; // عرض رسالة الانتظار
-                setTimeout(() => {
-                    document.getElementById('content-container').style.display = 'flex';
-                    document.getElementById('loading-message').style.display = 'none'; // إخفاء رسالة الانتظار بعد التحميل
-                }, 100); // إخفاء الرسالة بعد 0.1 ثانية
             }
         }
     </script>
